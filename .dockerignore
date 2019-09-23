@@ -1,0 +1,13 @@
+.circleci
+.env
+tests
+.gitignore
+.travis.yml
+image.png
+Pipfile*
+Procfile
+README.rst
+requirements.txt
+setup.cfg
+Vagrantfile
+migrations

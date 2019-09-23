@@ -17,6 +17,9 @@ class Config(object):
     JWT_AUTH_USERNAME_KEY = 'email'
     JWT_AUTH_HEADER_PREFIX = 'Token'
     CORS_ORIGIN_WHITELIST = [
+        'http://0.0.0.0',
+        'http://localhost',
+        'http://127.0.0.1',
         'http://0.0.0.0:4100',
         'http://localhost:4100',
         'http://0.0.0.0:8000',
@@ -36,6 +39,7 @@ class ProdConfig(Config):
     DEBUG = False
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL',
                                              'postgresql://localhost/example')
+    CORS_ORIGIN_WHITELIST = ['*']
 
 
 class DevConfig(Config):
